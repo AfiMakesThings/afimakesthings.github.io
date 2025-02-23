@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Fullscreen Toggle</title>
+    <style>
+        /* Image styling */
+        .image img {
+            width: 300px; /* Adjust as needed */
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        /* Fullscreen mode */
+        .fullscreen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: contain;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 9999;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="images/Cybertruck/CT3.PNG" class="image main" style="box-shadow: 0px 0px 10px rgba(7, 7, 7, 0.3);" target="_self">
+        <img id="toggleImage" src="images/Cybertruck/CT3.PNG" alt="My Project Image">
+    </a>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const img = document.getElementById("toggleImage");
+
+            img.addEventListener("click", function (event) {
+                event.preventDefault(); // Prevents default link behavior
+                this.classList.toggle("fullscreen"); // Toggle fullscreen class
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Afi Makes Things! - Humidity Controller</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+		integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header1 id="header">
+						<!--<a href="index.html" class="logo">Afi Makes Things!</a>-->
+					</header1>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="/index.html">home</a></li>
+							<li><a href="/indexp3.html">back</a></li>
+							<li class="active"><a href="DHT.html">Humidity Controller</a></li>
+							<li><a class="mobile-only" href="Pages/WhoAmI.html">About Me</a></li>
+							<!-- <li><a href="elements.html">Elements Reference</a></li> -->
+						</ul>
+						<!-- Add this style block INSIDE HTML -->
+						<style>
+							/* By default, both classes are visible */
+							@media (min-width: 769px) {
+								.desktop-only {
+									display: block !important;
+								}
+								.mobile-only {
+									display: none !important;
+								}
+							}
+							/* When screen size is 768px or smaller (mobile), switch the visibility */
+							@media (max-width: 768px) {
+								.desktop-only {
+									display: none !important; /* Hide desktop tabs */
+								}
+								.mobile-only {
+									display: block !important; /* Show mobile-only tabs */
+								}
+							}
+						</style>
+						<ul class="icons">
+							<li><a href="https://linkedin.com/in/abolfazl-abbasi-b60850a2" class="fa-brands fa-linkedin fa-lg"></span></a></li>
+							<li><a href="mailto:abbasi.a92@gmail.com" class="fa-solid fa-envelope fa-lg"></span></a></li>
+							<li><a href="https://github.com/AfiMakesThings" class="fa-brands fa-github fa-lg"></span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+
+									<h1>Humidity Controller</h1>
+									<p>
+										Anti-condensation control circuit,<br /> 
+										Simple and reliable.
+									</p>
+								</header>
+
+								<div class="container">
+									<img id="toggleImage" src="/images/Anti-Condensation/dht.jpg" alt="My Project Image" class="image1NoBorder" width="60%" height="auto">
+								</div>
+								<br />
+								<h2>Background Story</h2>
+								<p>
+									The idea for this project came from one of my friends who needed a circuit to protect his electrical equipment against condensation. 
+									I designed the schematic and PCB in less than three hours and ordered from the JLCPCB.<br />
+									One of the main purposes of this project was to familiarize my friend with easyEDA and design PCBs and order them without any hassle.
+								</p>
+									
+									<h2>Key Features</h2>
+									<p>
+										This board uses a DHT11 sensor to measure relative humidity and temperature. All the measurements are analyzed and evaluated 
+										in an Arduino take action based on the captured values. 
+										The Arduino Nano can enable or disable two relays to turn on/off a heater and fan. 
+										As usual, I have used two female headers in parallel to simply attach the Arduino to the board.<br />
+										The DHT sensor can be attached to the board using the female header on the board. This will allow the user to easily replace the 
+										sensor in case of any issue or problem with the sensor. <br />
+										Two relay circuits with an LED to indicate the status of the contacts. The free-wheeling diode is also placed across the relay 
+										coil to protect the BJT against any undesired voltage spikes from the coil. <br />
+										There are several Phoenix screw terminals on the board to allow the user to hook up the fan, heater, and power source without any soldering. 
+										
+										</p>
+										<!--	
+										
+
+										<p>
+											The following image shows the rear view of the model. 
+											  <div class="image main"><img src="/images/Sudoku/box arrays.jpg" alt="" /></div>
+											 
+											<a href="/images/Cybertruck/CT3.PNG" class="image main" style="box-shadow: 0px 0px 10px rgba(7, 7, 7, 0.3);" target="_self">
+											<img src="/images/Cybertruck/CT3.PNG" alt="My Project Image"></a>
+											
+										</p>-->
+									 <h2>Challenges and Solutions</h2>
+									<p>
+										This design was quite simple to create and I needed to make this as quick as possible and show my friend how to use easyEDA for 
+										his circuit designs. <br />
+										The main challenge was managing the time and explaining every stage of the design while trying to focus on the technical aspects 
+										of the schematic and PCB.<br />
+										Other than that, I struggled to find footprints with the correct 3D models of parts. This took a bit of time to find and validate 
+										each part however, the final 3D model of the design was quite interesting for my friend because he could somehow see the 
+										finalized and manufactured PCB. <br />
+										Below is the 3D view of the PCB with populated components.
+										
+									</p>
+
+									<div class="container">
+										<img id="toggleImage" src="/images/Anti-Condensation/PCB 3D.jpg" alt="My Project Image" class="image1" width="80%" height="auto">
+									</div>
+									<br />
+									<p> 
+										The below image shows a snapshot of the schematic.
+									</p>
+
+									<div class="container">
+										<img id="toggleImage" src="/images/Anti-Condensation/Schematic.png" alt="My Project Image" class="image1" width="80%" height="auto">
+									</div>
+									<br />
+
+										<!--<div style=" text-align: center; padding-left: 80px; padding-right: 80px;" >
+											
+											<a href="/images/CNC/wiring.jpg" class="image fit" style="box-shadow: 0px 0px 10px rgba(7, 7, 7, 0.3); width: 750px; ">  <img src="/images/CNC/wiring.jpg" alt="" /> </a>
+									   
+										</div>	
+
+										The following videos show how the suspension mechanism works. The stability of the cylinder was further improved when loaded.
+
+										<div style=" margin: 20px 300px; " >
+											
+											 <a href="/images/CNC/X and Z Axis.jpg" class="image fit" style="box-shadow: 0px 0px 10px rgba(7, 7, 7, 0.3); width: 300px; ">  <img src="/images/CNC/X and Z Axis.jpg" alt="" /> </a>
+											
+										</div>-->
+										
+									<h2>Final Words</h2>
+									<p>
+										This was the quickest project that I have ever done. I finished the whole design including brainstorming, 
+										schematic and PCB design in less than 3 hours. <br />
+										My friend and I ordered the PCB from the JLCPCB and he received the boards in two weeks. 
+										He was quite satisfied with the quality of the boards.<br />
+										Eventually, we developed an Arduino code to read the measurements from the DHT11 sensor and activate the heater and fan if needed.
+										</p>
+									
+									
+									<hr />
+									
+									<h3>Interesting Project? Let's talk about it :)</h3>
+								
+									
+							<form method="post" action="https://formspree.io/f/xvggqqky">
+								<input type="hidden" name="Subject" id="Subject" value="DHT11"  />
+								<div class="row gtr-uniform">
+									<div class="col-4 col-12-xsmall">
+										<label class="fs-label" for="Name">Name (*)</label>
+										<input type="text" name="Name" id="Name" value="" style="height: 40px;" required />
+									</div>
+									
+									<div class="col-4 col-12-xsmall">
+										<label class="fs-label" for="Email">Email (*)</label>
+										<input type="text" name="Email" id="Email" value="" style="height: 40px;" required />
+									</div>
+									<div class="col-4 col-12-xsmall">
+										<label  class="fs-label" for="Company">Company</label>
+										<input type="text" name="Company" id="Company" value="" style="height: 40px;" />
+									</div>
+									
+									<div class="col-12 col-12-xsmall">
+										<!-- style="padding: 10px;" class="fs-textarea" class="fs-label" <label class="fs-label" for="message">Message (*)</label> -->
+										<textarea
+										  style="padding: 10px;"
+										  id="Message"
+										  name="Message"
+										  placeholder="Share your thoughts and suggestions here."
+										  rows="3"
+										  required
+										></textarea>
+									</div>
+									<br />
+
+								  <div class="actions">
+									<input class="button primary" type="submit" value="Submit"  />
+								  </div>
+
+								</div>
+							</form>
+						</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<!--<section>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="3"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+						</section>
+						<section class="split contact">
+							<section class="alt">
+								<h3>Address</h3>
+								<p>1234 Somewhere Road #87257<br />
+								Nashville, TN 00000-0000</p>
+							</section>
+							<section>
+								<h3>Phone</h3>
+								<p><a href="#">(000) 000-0000</a></p>
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">info@untitled.tld</a></p>
+							</section>-->
+							<section>
+								<h3>Let's socialize</h3>
+								<ul class="icons">
+									<li><a href="https://linkedin.com/in/abolfazl-abbasi-b60850a2" class="fa-brands fa-linkedin fa-lg"></span></a></li>
+									<li><a href="mailto:abbasi.a92@gmail.com" class="fa-solid fa-envelope fa-lg"></span></a></li>
+									<li><a href="https://github.com/AfiMakesThings" class="fa-brands fa-github fa-lg"></span></a></li>
+								</ul>
+								<!--<ul class="icons alt">
+									<li><a href="https://linkedin.com/in/abolfazl-abbasi-b60850a2" class="fa-brands fa-linkedin" style="font-size: 2em;"></a></li>
+									<li><a href="mailto:abbasi.a92@gmail.com" class="fa-solid fa-envelope fa-lg" style="margin-left: 20px;"></a></li>
+									<li><a href="https://github.com/AfiMakesThings" class="fa-brands fa-github" style="font-size: 2em;"></a></li>
+								</ul>-->
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; AfiMakesThings!</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="/assets/js/popup.js"></script>
+			<script src="/assets/js/jquery.min.js"></script>
+			<script src="/assets/js/jquery.scrollex.min.js"></script>
+			<script src="/assets/js/jquery.scrolly.min.js"></script>
+			<script src="/assets/js/browser.min.js"></script>
+			<script src="/assets/js/breakpoints.min.js"></script>
+			<script src="/assets/js/util.js"></script>
+			<script src="/assets/js/main.js"></script>
+
+	</body>
+</html>

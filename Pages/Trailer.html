@@ -1,0 +1,327 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Afi Makes Things! - Trailer Guidance System</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+		integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header1 id="header">
+						<!--<a href="index.html" class="logo">Afi Makes Things!</a>-->
+					</header1>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="/index.html">home</a></li>
+							<li><a href="/indexp2.html">back</a></li>
+							<li class="active"><a href="Trailer.html">Trailer Guidance System</a></li>
+							<li><a class="mobile-only" href="Pages/WhoAmI.html">About Me</a></li>
+							<!-- <li><a href="elements.html">Elements Reference</a></li> -->
+						</ul>
+						<!-- Add this style block INSIDE HTML -->
+						<style>
+							/* By default, both classes are visible */
+							@media (min-width: 769px) {
+								.desktop-only {
+									display: block !important;
+								}
+								.mobile-only {
+									display: none !important;
+								}
+							}
+							/* When screen size is 768px or smaller (mobile), switch the visibility */
+							@media (max-width: 768px) {
+								.desktop-only {
+									display: none !important; /* Hide desktop tabs */
+								}
+								.mobile-only {
+									display: block !important; /* Show mobile-only tabs */
+								}
+							}
+						</style>
+						<ul class="icons">
+							<li><a href="https://linkedin.com/in/abolfazl-abbasi-b60850a2" class="fa-brands fa-linkedin fa-lg"></span></a></li>
+							<li><a href="mailto:abbasi.a92@gmail.com" class="fa-solid fa-envelope fa-lg"></span></a></li>
+							<li><a href="https://github.com/AfiMakesThings" class="fa-brands fa-github fa-lg"></span></a></li>
+						</ul>
+					</nav>
+
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+
+									<h1>Trailer <br />Guidance System</h1>
+									<p>Jackknifing prevention system with <br />screen and alarm.</p>
+								</header>
+								
+								<div class="container">
+									<img id="toggleImage" src="/images/Trailer Reversing System/title.jpg" alt="My Project Image" class="image1NoBorder" width="70%" height="auto">
+								</div>
+								<br /> 
+								
+								<h2>Background Story</h2>
+								<p>
+									This is my first-year project (my master's degree) that I did with three other students. We had two weeks to find a project 
+									idea through brainstorming as a team. We found a problem or issue in jackknifing that could severely damage trucks and trailers 
+									during reversing. <br />
+									During the brainstorming meetings, we found several solutions however some of them were more challenging to implement. 
+									For instance, an IR transmitter and receiver could be used on trucks and trailers to calculate the angle between them. 
+									After an extensive analysis, we identified that dust and moisture could potentially affect the readings and trigger a false alarm.<br />
+									The below diagram shows the IR sensor that could be used for this purpose.<br />
+									<div class="container">
+										<img id="Img" src="/images/Trailer Reversing System/Concept.jpg" alt="My Project Image" class="image1"  height="auto">
+										<style>
+											#Img {
+												/*width: var(--image-size, 40%);  Default width from HTML */
+												width:50%;
+											}
+										
+											@media screen and (max-width: 768px) {
+												#Img {
+													/*width: calc(var(--img-size, 40%) * 2);  Double the width for mobile */
+													width:80%;
+												}
+											}
+										</style>
+									</div>
+									<br />
+									Eventually, we decided to proceed with a motion sensor to be able to detect the angle between trailers and trucks.
+								</p>
+									
+									<h2>Key Features</h2>
+									<p>
+										Our solution for the jackknifing problem was using two IMUs (Inertial Measurement Unit) and calculating the instantaneous angle 
+										by subtracting the angle of the truck from the trailer. I had a bit of experience in using the MPU6050 module with Arduino so I 
+										suggested using the same module in this project. This module is a 3-axis accelerometer and gyroscope sensor.<br />
+										The prevention system was required to have an alarm and indicator to notify the driver if the jackknifing was about to occur. 
+										In our project, we decided to have an LCD screen to show the angle while driving and an LED to flash if the angle is over the setpoint. 
+										A buzzer would also alarm the driver in this scenario.<br />
+										Using the push buttons around the screen, the driver could adjust the jackknifing angle manually and set the alarms based on his/her 
+										preferences and the specifications of the truck. Any alarm could be activated or deactivated using the in-built menu.<br />
+										The below image shows the in-built menu.<br />
+
+										<div class="container" >
+											<img id="Image" src="/images/Trailer Reversing System/Menu1.jpg" alt="My Project Image" class="image1"  height="auto">
+											<style>
+												#Image {
+													/*width: var(--image-size, 40%);  Default width from HTML */
+													width:40%;
+												}
+											
+												@media screen and (max-width: 768px) {
+													#Image {
+														/*width: calc(var(--img-size, 40%) * 2);  Double the width for mobile */
+														width:80%;
+													}
+												}
+											</style>
+											<br /> 
+										</div>
+										We created a graphical representation of the truck and its trailer to allow the driver to simply understand the reversing angle. 
+										The below image shows the triggered alarm during reversing. As shown below, the LED is turned on indicating the unsafe reversing angle.<br />
+										<div class="container" >
+											<img id="Image1" src="/images/Trailer Reversing System/Warning.jpg" alt="My Project Image" class="image1"  height="auto">
+											<style>
+												#Image1 {
+													/*width: var(--image-size, 40%);  Default width from HTML */
+													width:40%;
+												}
+											
+												@media screen and (max-width: 768px) {
+													#Image1 {
+														/*width: calc(var(--img-size, 40%) * 2);  Double the width for mobile */
+														width:80%;
+													}
+												}
+											</style>
+											<br /> 
+										</div>	
+									</p>
+									
+									 <h2>Challenges and Solutions</h2>
+									<p>
+										This project was designed to be done as a group of four. We were four strangers with different backgrounds trying to deliver 
+										a project from the brainstorming stage to the final product. I had a bit more experience with Arduino than others so the team decided 
+										to assign me as the project manager. <br />
+										It was challenging to know each team member's skills capabilities and even their passion and dedication to the project. 
+										Other than managing the project, I designed and built the hardware, created the enclosure, and worked a bit on the software. 
+										In the context of the hardware design, troubleshooting the board was sometimes challenging because the prototype was made on a 
+										prototyping PCB with hand soldering and poor connection between parts of the circuit could cause strange behaviour in the board.
+										I designed the schematics and PCB in a way to be able to mount the IMU sensor separately on any part of the truck and trailer. 
+										The following image is a snapshot of the schematic design in Altium.<br />
+										<div class="container" >
+											<img id="Image2" src="/images/Trailer Reversing System/Schematic.jpg" alt="My Project Image" class="image1"  height="auto">
+											<style>
+												#Image2 {
+													/*width: var(--image-size, 40%);  Default width from HTML */
+													width:80%;
+												}
+											
+												@media screen and (max-width: 768px) {
+													#Image2 {
+														/*width: calc(var(--img-size, 40%) * 2);  Double the width for mobile */
+														width:100%;
+													}
+												}
+											</style>
+											<br /> 
+										</div>	
+										The below image shows the 3D view of the PCB that I made in Altium.<br />
+
+										<div class="container" >
+											<img id="Image3" src="/images/Trailer Reversing System/PCB_3D.jpg" alt="My Project Image" class="image1"  height="auto">
+											<style>
+												#Image3 {
+													/*width: var(--image-size, 40%);  Default width from HTML */
+													width:80%;
+												}
+											
+												@media screen and (max-width: 768px) {
+													#Image3 {
+														/*width: calc(var(--img-size, 40%) * 2);  Double the width for mobile */
+														width:100%;
+													}
+												}
+											</style>
+											<br /> 
+										</div>	
+										I designed the enclosure to fit all parts of the circuits inside a box however, we could not get a free timeslot to 3D-print the model. 
+										We urgently needed to prepare the hardware for presentation day so we managed to buy an off-the-shelf container and drilled some holes 
+										to make it suitable for our project. <br />
+										The following image is the 3D model of the enclosure that I designed for this project.<br />
+										<div class="container" >
+											<img id="Image3" src="/images/Trailer Reversing System/Enclosure.jpg" alt="My Project Image" class="image1"  height="auto">
+											<style>
+												#Image3 {
+													/*width: var(--image-size, 40%);  Default width from HTML */
+													width:80%;
+												}
+											
+												@media screen and (max-width: 768px) {
+													#Image3 {
+														/*width: calc(var(--img-size, 40%) * 2);  Double the width for mobile */
+														width:100%;
+													}
+												}
+											</style>
+											<br /> 
+										</div>	
+									</p>
+
+									<h2>Final Words</h2>
+									<p>
+										This was my first practical project in my master's degree. I had a chance to collaborate with other students and achieve a team goal.<br /> 
+										Despite all the challenges, I enjoyed developing an idea to solve a real-life problem. This project had a significant difference 
+										from my other DIY projects, during this project I learned how to write a comprehensive academic report and capture all 
+										the details for reference. 
+										In terms of product design and development, there are lots of opportunities that could optimise this project and make it more 
+										industrial rather than a simple university project. For instance, the functionality of this product could be added 
+										to the existing display of the vehicle without adding an extra display for this purpose. <br />
+										Overall, this project helped me to develop my teamwork skills and manage a small team to create a functional product as well as 
+										control timelines and deliverables.
+										</p>
+									
+									
+									<hr />
+									
+									<h3>Interesting Project? Let's talk about it :)</h3>
+								
+									
+							<form method="post" action="https://formspree.io/f/xvggqqky">
+								<input type="hidden" name="Subject" id="Subject" value="Trailer_Reversing_System"  />
+								<div class="row gtr-uniform">
+									<div class="col-4 col-12-xsmall">
+										<label class="fs-label" for="Name">Name (*)</label>
+										<input type="text" name="Name" id="Name" value="" style="height: 40px;" required />
+									</div>
+									
+									<div class="col-4 col-12-xsmall">
+										<label class="fs-label" for="Email">Email (*)</label>
+										<input type="text" name="Email" id="Email" value="" style="height: 40px;" required />
+									</div>
+									<div class="col-4 col-12-xsmall">
+										<label  class="fs-label" for="Company">Company</label>
+										<input type="text" name="Company" id="Company" value="" style="height: 40px;" />
+									</div>
+									
+									<div class="col-12 col-12-xsmall">
+										<!-- style="padding: 10px;" class="fs-textarea" class="fs-label" <label class="fs-label" for="message">Message (*)</label> -->
+										<textarea
+										  style="padding: 10px;"
+										  id="Message"
+										  name="Message"
+										  placeholder="Share your thoughts and suggestions here."
+										  rows="3"
+										  required
+										></textarea>
+									</div>
+									<br />
+
+								  <div class="actions">
+									<input class="button primary" type="submit" value="Submit"  />
+								  </div>
+
+								</div>
+							</form>
+						</section>
+
+				</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						
+							<section>
+								<h3>Let's socialize</h3>
+								<ul class="icons">
+									<li><a href="https://linkedin.com/in/abolfazl-abbasi-b60850a2" class="fa-brands fa-linkedin fa-lg"></span></a></li>
+									<li><a href="mailto:abbasi.a92@gmail.com" class="fa-solid fa-envelope fa-lg"></span></a></li>
+									<li><a href="https://github.com/AfiMakesThings" class="fa-brands fa-github fa-lg"></span></a></li>
+								</ul>
+								<!--<ul class="icons alt">
+									<li><a href="https://linkedin.com/in/abolfazl-abbasi-b60850a2" class="fa-brands fa-linkedin" style="font-size: 2em;"></a></li>
+									<li><a href="mailto:abbasi.a92@gmail.com" class="fa-solid fa-envelope fa-lg" style="margin-left: 20px;"></a></li>
+									<li><a href="https://github.com/AfiMakesThings" class="fa-brands fa-github" style="font-size: 2em;"></a></li>
+								</ul>-->
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; AfiMakesThings!</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="/assets/js/popup.js"></script>
+			<script src="/assets/js/jquery.min.js"></script>
+			<script src="/assets/js/jquery.scrollex.min.js"></script>
+			<script src="/assets/js/jquery.scrolly.min.js"></script>
+			<script src="/assets/js/browser.min.js"></script>
+			<script src="/assets/js/breakpoints.min.js"></script>
+			<script src="/assets/js/util.js"></script>
+			<script src="/assets/js/main.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Afi Makes Things! - H-Bridge DC Motor Driver</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header1 id="header">
+
+					</header1>
+					<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+					integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+					crossorigin="anonymous" referrerpolicy="no-referrer" />
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="/index.html">back</a></li>
+							<li class="active"><a href="H_Bridge.html">H-Bridge DC Motor Driver</a></li>
+							<li><a class="mobile-only" href="Pages/WhoAmI.html">About Me</a></li>
+							<!-- <li><a href="elements.html">Elements Reference</a></li> -->
+						</ul>
+						<!-- Add this style block INSIDE HTML -->
+						<style>
+							/* By default, both classes are visible */
+							@media (min-width: 769px) {
+								.desktop-only {
+									display: block !important;
+								}
+								.mobile-only {
+									display: none !important;
+								}
+							}
+							/* When screen size is 768px or smaller (mobile), switch the visibility */
+							@media (max-width: 768px) {
+								.desktop-only {
+									display: none !important; /* Hide desktop tabs */
+								}
+								.mobile-only {
+									display: block !important; /* Show mobile-only tabs */
+								}
+							}
+						</style>
+						<ul class="icons">
+							<li><a href="https://linkedin.com/in/abolfazl-abbasi-b60850a2" class="fa-brands fa-linkedin fa-lg"></span></a></li>
+							<li><a href="mailto:abbasi.a92@gmail.com" class="fa-solid fa-envelope fa-lg"></span></a></li>
+							<li><a href="https://github.com/AfiMakesThings" class="fa-brands fa-github fa-lg"></span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+
+									<h1>H-Bridge <br />DC Motor Driver</h1>
+									<p>This project is done based on an off-the-shelf DC motor driver,<br /> 
+										aiming to reverse engineer the PCB and schematic. </p>
+								</header>
+								<!--<div class="image main"><img src="/images/Hbridge/3d hbridge0.jpg" alt="" /></div>-->
+
+									<div class="container">
+										<img id="toggleImage" src="/images/Hbridge/3d hbridge0.jpg" alt="My Project Image" class="image1NoBorder" width="70%" height="auto">
+										<br />
+									</div>
+									<h2>Background Story</h2>
+									<p>I use Altium Designer for PCB designs at work and EasyEDA for my DIY projects. 
+										This is one of the projects that I did to learn more about creating schematics and PCBs using online tools. 
+										I usually use EasyEDA to create my schematics and PCBs. 
+										This online tool is quite handy for quick PCBs without getting into too many details and complexities.
+										Other than that, the PCB ordering process is significantly simplified, 
+										with just a few clicks the PCB can be ordered from JLCPCB. 
+										As I remember, my first PCB order was almost free and I just paid for shipping. 
+									</p>
+										<h2>Key Features</h2>
+										<p>
+											This motor driver is a two-channel H-bridge driver. 
+											A PWM signal can be fed into the board as well as a direction pin. 
+											The speed of the motor can be adjusted using an external PWM signal and the direction of the motor can be reversed
+											 using a control pin. The selected MOSFETs can handle up to 15A of current for each channel.
+											 The maximum voltage that could be used for driving the DC motors is 40v. 
+											 This PCB is dual-layer with a dimension of around 100X75 mm.
+											 The high current power supply and DC motor wires connect to the PCB using the Phoenix screw terminals
+											  on the side of the board. Other than that, all the control signals are fed to the circuit via pin headers.</p>
+										
+										 <h2>Challenges and Solutions</h2>
+										<p>
+											Reverse engineering was a bit of a challenge and I spent some time to precisely identify all 
+											the traces and connections. I attempted to capture the traces and add them to my schematic to reduce 
+											the complexity of it. 
+											Once I identified all the traces, I attempted to explain and justify the components on the PCB 
+											to be able to clarify my schematic. <br />
+											I had purchased the PCB from Aliexpress and there were some components on the board that I could not find 
+											any datasheet for them. One of the components that I struggled to find datasheet,  was the buck converter 
+											chip to provide a stable 5v for the logic circuit. The high power source could be converted to a lower 
+											voltage (5v) and used by other parts of the circuit.<br /> 
+											This board does not have a heatsink for high-power MOSFETs. High-current motors could potentially damage the 
+											MOSFETs and the driving circuit. I could probably improve the circuit with a new layout to create some 
+											room for heatsinks.<br />
+											Initially, I designed the PCB layout but I realized that the 3D view is incomplete due to using components
+											without a 3D file. Then I decided to replace all the components with the one with a 3D view/file.
+											This took a bit of to do and also adjust the existing schematic and PCB layouts. <br />
+											It is quite important to review any part in the library of the EasyEDA to confirm the symbol, 
+											footprint, and 3D model before adding it to projects.
+										</p>
+											The following image shows the schematic of the board drawn using EasyEDA. 
+											<!--  <div class="image main"><img src="/images/Sudoku/box arrays.jpg" alt="" /></div>
+											 
+											<a href="images/Hbridge/Schematic.jpg" class="image main" style="box-shadow: 0px 0px 10px rgba(7, 7, 7, 0.3);" target="_self">
+											<img src="/images/Hbridge/Schematic.jpg" alt="My Project Image"></a>-->
+
+										<div class="container">
+											<img id="toggleImage" src="/images/Hbridge/Schematic.jpg" alt="My Project Image" class="image1" width="100%" height="80%">
+											
+										</div>
+											The following image is the 3D view of the PCB.
+											<!--<div class="row gtr-50 gtr-50">
+												<div class="col-10"> <a href="images/Hbridge/3d.jpg" class="image fit" style="padding-inline-start: 150px;" style="box-shadow: 0px 0px 10px rgba(7, 7, 7, 0.3);" target="_self">
+												<img src="/images/Hbridge/3d.jpg" alt="My Project Image" width="640" height="480"></a> </div>
+											</div>-->
+											
+										<div class="container">
+											<img id="toggleImage" src="/images/Hbridge/3d.jpg" alt="My Project Image" class="image1" width="80%" height="80%">
+											
+										</div>										
+										
+										<h2>Final Words</h2>
+										<p>
+											This project was one of the very first PCBs that I used EasyEDA to design. 
+											The PCB design using this online tool is quite simple and quick. I designed this PCB to learn about EasyEDA and never 
+											intended to order it from JLCPCB.  <br />
+											In my opinion, Altium Designer is the most advanced software for designing PCBs however, 
+											it is a paid software so I preferred to use an online tool for this purpose. 
+											As I mentioned earlier, One of the features that I like about this online tool is the direct 
+											PCB ordering process without generating manufacturing files such as Gerber, Pick and Place, NC drill and BOM. 
+											PCBs are ordered through JLCPCB at an affordable price. 
+										</p>
+										
+										
+										<hr />
+										
+										<h3>Interesting Project? Let's talk about it :)</h3>
+									
+										
+										<form method="post" action="https://formspree.io/f/xvggqqky">
+											<input type="hidden" name="Subject" id="Subject" value="H-Bridge_Driver"  />
+											<div class="row gtr-uniform">
+												<div class="col-4 col-12-xsmall">
+													<label class="fs-label" for="Name">Name (*)</label>
+													<input type="text" name="Name" id="Name" value="" style="height: 40px;" required />
+												</div>
+												
+												<div class="col-4 col-12-xsmall">
+													<label class="fs-label" for="Email">Email (*)</label>
+													<input type="text" name="Email" id="Email" value="" style="height: 40px;" required />
+												</div>
+												<div class="col-4 col-12-xsmall">
+													<label  class="fs-label" for="Company">Company</label>
+													<input type="text" name="Company" id="Company" value="" style="height: 40px;" />
+												</div>
+												
+												<div class="col-12 col-12-xsmall">
+													<!-- style="padding: 10px;" class="fs-textarea" class="fs-label" <label class="fs-label" for="message">Message (*)</label> -->
+													<textarea
+													  style="padding: 10px;"
+													  id="Message"
+													  name="Message"
+													  placeholder="Share your thoughts and suggestions here."
+													  rows="3"
+													  required
+													></textarea>
+												</div>
+												<br />
+
+											  <div class="actions">
+												<input class="button primary" type="submit" value="Submit"  />
+											  </div>
+
+											</div>
+										</form>
+									
+								</section>
+	
+						</div>
+						<!-- Footer -->
+							<footer id="footer">
+								<section>
+									<h3>Let's socialize</h3>
+									<ul class="icons">
+										<li><a href="https://linkedin.com/in/abolfazl-abbasi-b60850a2" class="fa-brands fa-linkedin fa-lg"></span></a></li>
+										<li><a href="mailto:abbasi.a92@gmail.com" class="fa-solid fa-envelope fa-lg"></span></a></li>
+										<li><a href="https://github.com/AfiMakesThings" class="fa-brands fa-github fa-lg"></span></a></li>
+									</ul>
+								</section>
+							</footer>
+			
+						<!-- Copyright -->
+								<div id="copyright">
+									<ul><li>&copy; AfiMakesThings!</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+								</div>
+			
+						</div>
+
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="/assets/js/popup.js"></script>	
+			<script src="/assets/js/jquery.min.js"></script>
+			<script src="/assets/js/jquery.scrollex.min.js"></script>
+			<script src="/assets/js/jquery.scrolly.min.js"></script>
+			<script src="/assets/js/browser.min.js"></script>
+			<script src="/assets/js/breakpoints.min.js"></script>
+			<script src="/assets/js/util.js"></script>
+			<script src="/assets/js/main.js"></script>
+
+	</body>
+</html>

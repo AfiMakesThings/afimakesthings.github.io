@@ -1,0 +1,314 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Afi Makes Things! - UAV Payload Mechanism</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header1 id="header">
+						<!--<a href="index.html" class="logo">Afi Makes Things!</a>-->
+					</header1>
+					<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+					integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+					crossorigin="anonymous" referrerpolicy="no-referrer" />
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="/index.html">back</a></li>
+							<li class="active"><a href="Payload.html">UAV Payload Mechanism</a></li>
+							<li><a class="mobile-only" href="Pages/WhoAmI.html">About Me</a></li>
+							<!-- <li><a href="elements.html">Elements Reference</a></li> -->
+						</ul>
+						<!-- Add this style block INSIDE HTML -->
+						<style>
+							/* By default, both classes are visible */
+							@media (min-width: 769px) {
+								.desktop-only {
+									display: block !important;
+								}
+								.mobile-only {
+									display: none !important;
+								}
+							}
+							/* When screen size is 768px or smaller (mobile), switch the visibility */
+							@media (max-width: 768px) {
+								.desktop-only {
+									display: none !important; /* Hide desktop tabs */
+								}
+								.mobile-only {
+									display: block !important; /* Show mobile-only tabs */
+								}
+							}
+						</style>
+						<ul class="icons">
+							<li><a href="https://linkedin.com/in/abolfazl-abbasi-b60850a2" class="fa-brands fa-linkedin fa-lg"></span></a></li>
+							<li><a href="mailto:abbasi.a92@gmail.com" class="fa-solid fa-envelope fa-lg"></span></a></li>
+							<li><a href="https://github.com/AfiMakesThings" class="fa-brands fa-github fa-lg"></span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+
+									<h1>UAV Payload <br />Mechanism</h1>
+									<p>An amazing university project,<br />
+										Simple, robust and reliable UAV payload system.</p>
+								</header>
+
+								<div class="container">
+									<img id="toggleImage" src="/images/Payload/Suspended payload, uni project.JPG" alt="My Project Image" class="image1NoBorder" width="35%" height="auto">
+								</div>
+	
+									<h2>Background Story</h2>
+									<p>This is a project that I did as part of a larger project on an autonomous UAV. 
+										The UAV project was about designing an autonomous system that could take off from a designated spot
+										and hover around a perimeter to find the marked spots and drop the payload. <br />
+										The main UAV was developed based on a Raspberry Pi running Linux. We had two team members
+										working on the navigation using ROS (Robot Operating System). 
+										The third member worked on image processing and detection of the marked spots on the ground. 
+										The main frame was developed by another team member and finally, a project manager coordinated all the tasks with us.<br /> 
+										This unit was delivered in two semesters and I joined the team in the second semester and the team assigned the payload system to me. 
+									</p>
+										
+										<h2>Key Features</h2>
+										<p>
+											The payload mechanism is required to drop the load once the target is detected. 
+											The team suggested having a servo motor that could be triggered by the main flight controller. 
+											The load was a cylindrical piece of wood that needed to drop on the marked spot. 
+											I designed the payload mechanism to hold the load and release it once the servo motor is triggered. 
+											The structure of the design could hold the wood in place using the attached arm on the shaft of the servo motor. 
+											For simplicity, I designed a recessed box to secure the servo motor on the main structure. <br /> 
+											The below image shows how the servo motor mounts on the payload mechanism.
+											</p>
+											<!--
+											<div>
+												<div style=" text-align: center;" >
+													 <a href="/images/Payload/Suspended payload rear.JPG" class="image" >  <img src="/images/Payload/Suspended payload rear.JPG" alt="" width="400px" height="550px"/> </a> 
+												</div>
+											</div>
+												-->
+											<div class="container" >
+												<img id="toggleImage" src="/images/Payload/Suspended payload rear.JPG" alt="My Project Image" class="image1"  height="auto">
+												<style>
+													.image1 {
+														/*width: var(--image-size, 40%);  Default width from HTML */
+														width:45%;
+													}
+												
+													@media screen and (max-width: 768px) {
+														.image1 {
+															/*width: calc(var(--img-size, 40%) * 2);  Double the width for mobile */
+															width:80%;
+														}
+													}
+												</style>
+												<br /> 
+											</div>
+
+											<!--<p>
+												The following image shows the rear view of the model. 
+												  <div class="image main"><img src="/images/Sudoku/box arrays.jpg" alt="" /></div>
+												 
+												<a href="/images/Cybertruck/CT3.PNG" class="image main" style="box-shadow: 0px 0px 10px rgba(7, 7, 7, 0.3);" target="_self">
+												<img src="/images/Cybertruck/CT3.PNG" alt="My Project Image"></a>
+												
+											</p>-->
+										 <h2>Challenges and Solutions</h2>
+										<p>
+											Before attempting to design the payload mechanism, the project manager discussed the main requirements for this design 
+											as well as extra features that could improve the stability of the cylindrical structure. <br /> 
+											Due to the high airflow around the payload mechanism accuracy of the drop could be affected. One of the assessment 
+											criteria was the precision of the drop in the project. I decided to have some sort of free suspension in my design to 
+											prevent any undesired movement during the flight. <br /> 
+											Using some small bearings, I was able to create two angles of freedom to keep the payload mechanism straight and 
+											perpendicular to the ground. This feature would significantly improve the payload release. <br /> 
+											The payload system is required to be light and stable in high winds. The light design of the payload created some 
+											complexity and I had issues with balancing the structure on the ground. Due to the unequal weight of printed PLA on 
+											two sides of the cylinder (One side of the cylinder was heavier due to the servo motor mounting), 
+											the payload mechanism wouldn't stay perpendicular to the ground and I needed to find the centre of gravity and 
+											attempt to move it to the middle of the cylinder. I managed to do so by adjusting the location of the bearings. 
+	
+											<!--<div style=" text-align: center; padding-left: 80px; padding-right: 80px;" >
+												
+												<a href="/images/CNC/wiring.jpg" class="image fit" style="box-shadow: 0px 0px 10px rgba(7, 7, 7, 0.3); width: 750px; ">  <img src="/images/CNC/wiring.jpg" alt="" /> </a>
+										   
+											</div>	
+	
+											The following videos show how the suspension mechanism works. The stability of the cylinder was further improved when loaded.
+	
+											<div style=" margin: 20px 300px; " >
+												
+												 <a href="/images/CNC/X and Z Axis.jpg" class="image fit" style="box-shadow: 0px 0px 10px rgba(7, 7, 7, 0.3); width: 300px; ">  <img src="/images/CNC/X and Z Axis.jpg" alt="" /> </a>
+												
+											</div>-->
+											
+											The following videos show how the suspension mechanism works. The stability of the cylinder was further improved when loaded. 
+										</p>
+										<!--
+										<div style="text-align: center;">
+											<video style="box-shadow: 0px 0px 10px rgba(7, 7, 7, 0.3); height: 525px; width: 300px;" controls poster="/images/Payload/poster1.jpg">
+												<source src="/images/Payload/Payload Test-music.mp4" type="video/mp4">
+												Your browser does not support the video tag.
+											</video>
+										</div>
+										-->
+										<div class="container">
+											<video class="AfiVidSize" style="box-shadow: 0px 0px 10px rgba(7, 7, 7, 0.3);"  height="auto"  controls poster="/images/Payload/poster1.jpg" >
+												<source src="/images/Payload/Payload Test-music.mp4" type="video/mp4">
+												<style>
+													.AfiVidSize {
+														/*width: var(--image-size, 40%);  Default width from HTML */
+														width:40%;
+														
+													}
+												
+													@media screen and (max-width: 768px) {
+														.AfiVidSize {
+															/*width: calc(var(--img-size, 40%) * 2);  Double the width for mobile */
+														width:80%;
+														}
+													}
+												</style>
+												Your browser does not support the video tag.
+											</video>
+										</div>
+
+
+										<br />
+										<!--
+										<div style="text-align: center;">
+											<video style="box-shadow: 0px 0px 10px rgba(7, 7, 7, 0.3); " width="700" height="400"  controls poster="/images/Payload/poster2.jpg" >
+												<source src="/images/Payload/Payload Test-music 2.mp4" type="video/mp4">
+												Your browser does not support the video tag.
+											</video>
+										</div>
+										-->
+
+										<div class="container">
+											<video class="AfiVidSize1" style="box-shadow: 0px 0px 10px rgba(7, 7, 7, 0.3);"  height="auto"  controls poster="/images/Payload/poster2.jpg" >
+												<source src="/images/Payload/Payload Test-music 2.mp4" type="video/mp4">
+												Your browser does not support the video tag.
+											</video>
+											<style>
+												.AfiVidSize1 {
+													/*width: var(--image-size, 40%);  Default width from HTML */
+													width:50%;
+												}
+											
+												@media screen and (max-width: 768px) {
+													.AfiVidSize1 {
+														/*width: calc(var(--img-size, 40%) * 2);  Double the width for mobile */
+													width:80%;
+													}
+												}
+											</style>
+											</div>
+										<br />
+
+										<h2>Final Words</h2>
+										<p>
+											This university project was one of my favorite projects and I learned more about 3D printing and how to 
+											design efficiently to meet the project requirements. <br />
+											Our team received the full mark for this project and my 3D design was recognised as the best payload mechanism among all other groups. 
+										</p>
+										
+										
+										<hr />
+										
+										<h3>Interesting Project? Let's talk about it :)</h3>
+									
+										
+								<form method="post" action="https://formspree.io/f/xvggqqky">
+									<input type="hidden" name="Subject" id="Subject" value="Payload"  />
+									<div class="row gtr-uniform">
+										<div class="col-4 col-12-xsmall">
+											<label class="fs-label" for="Name">Name (*)</label>
+											<input type="text" name="Name" id="Name" value="" style="height: 40px;" required />
+										</div>
+										
+										<div class="col-4 col-12-xsmall">
+											<label class="fs-label" for="Email">Email (*)</label>
+											<input type="text" name="Email" id="Email" value="" style="height: 40px;" required />
+										</div>
+										<div class="col-4 col-12-xsmall">
+											<label  class="fs-label" for="Company">Company</label>
+											<input type="text" name="Company" id="Company" value="" style="height: 40px;" />
+										</div>
+										
+										<div class="col-12 col-12-xsmall">
+											<!-- style="padding: 10px;" class="fs-textarea" class="fs-label" <label class="fs-label" for="message">Message (*)</label> -->
+											<textarea
+											  style="padding: 10px;"
+											  id="Message"
+											  name="Message"
+											  placeholder="Share your thoughts and suggestions here."
+											  rows="3"
+											  required
+											></textarea>
+										</div>
+										<br />
+	
+									  <div class="actions">
+										<input class="button primary" type="submit" value="Submit"  />
+									  </div>
+	
+									</div>
+								</form>
+							</section>
+	
+					</div>
+	
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							<h3>Let's socialize</h3>
+							<ul class="icons">
+								<li><a href="https://linkedin.com/in/abolfazl-abbasi-b60850a2" class="fa-brands fa-linkedin fa-lg"></span></a></li>
+								<li><a href="mailto:abbasi.a92@gmail.com" class="fa-solid fa-envelope fa-lg"></span></a></li>
+								<li><a href="https://github.com/AfiMakesThings" class="fa-brands fa-github fa-lg"></span></a></li>
+							</ul>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; AfiMakesThings!</li>
+							<li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+							<!--<ul class="icons">
+								<li><a href="https://linkedin.com/in/abolfazl-abbasi-b60850a2" class="fa-brands fa-linkedin"></span></a></li>
+								<li><a href="mailto:abbasi.a92@gmail.com" class="fa-solid fa-envelope"></span></a></li>
+								<li><a href="https://github.com/AfiMakesThings" class="fa-brands fa-github"></span></a></li>
+							</ul>-->
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="/assets/js/popup.js"></script>
+			<script src="/assets/js/jquery.min.js"></script>
+			<script src="/assets/js/jquery.scrollex.min.js"></script>
+			<script src="/assets/js/jquery.scrolly.min.js"></script>
+			<script src="/assets/js/browser.min.js"></script>
+			<script src="/assets/js/breakpoints.min.js"></script>
+			<script src="/assets/js/util.js"></script>
+			<script src="/assets/js/main.js"></script>
+
+	</body>
+</html>

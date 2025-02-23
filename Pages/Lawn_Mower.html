@@ -1,0 +1,405 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Afi Makes Things! - RC Lawn Mower</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+		integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header1 id="header">
+						<!--<a href="index.html" class="logo">Afi Makes Things!</a>-->
+					</header1>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="/index.html">back</a></li>
+							<li class="active"><a href="Lawn_Mower.html">RC Lawn Mower</a></li>
+							<!-- <li><a href="elements.html">Elements Reference</a></li> -->
+							<li><a class="mobile-only" href="Pages/WhoAmI.html">About Me</a></li>
+						</ul>
+						<!-- Add this style block INSIDE HTML -->
+						<style>
+							/* By default, both classes are visible */
+							@media (min-width: 769px) {
+								.desktop-only {
+									display: block !important;
+								}
+								.mobile-only {
+									display: none !important;
+								}
+							}
+							/* When screen size is 768px or smaller (mobile), switch the visibility */
+							@media (max-width: 768px) {
+								.desktop-only {
+									display: none !important; /* Hide desktop tabs */
+								}
+								.mobile-only {
+									display: block !important; /* Show mobile-only tabs */
+								}
+							}
+						</style>
+						<ul class="icons">
+							<li><a href="https://linkedin.com/in/abolfazl-abbasi-b60850a2" class="fa-brands fa-linkedin fa-lg"></span></a></li>
+							<li><a href="mailto:abbasi.a92@gmail.com" class="fa-solid fa-envelope fa-lg"></span></a></li>
+							<li><a href="https://github.com/AfiMakesThings" class="fa-brands fa-github fa-lg"></span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+
+									<h1>RC Lawn Mower</h1>
+									<p>
+										Chilling on the balcony <br />while the grass is being cut.</p>
+								</header>
+
+
+								<div class="container">
+									<img id="toggleImage" src="/images/Lawn Mower/4Wheel Lawn Mower11.jpeg" alt="My Project Image" class="image1NoBorder" width="70%" height="auto">
+									<br />
+								</div>
+								
+								<h2>Background Story</h2>
+								<p>
+									One of my friends used to work in hospitals and aged care facilities. At his workplace, there were a bunch of broken electric 
+									beds and wheelchairs about to be thrown out. He asked his manager to get those parts and hopefully do a DIY project with them. 
+									He received two electric beds and one wheelchair and salvaged two linear jacks and two DC motors.<br /> 
+									In the meantime, I found a broken remote control online that someone was giving away for free. According to the owner, 
+									the transmitter stopped working, turned off and never turned back on. I picked up the transmitter as well as the receiver 
+									and was hoping that could be an easy fix for me because I suspected a power issue in the transmitter after noticing some 
+									rusty and corroded battery terminals. I managed to turn the transmitter on and then simply configure the receiver using its user manual.<br /> 
+									Initially, we made a small single-blade lawn mower and then proceeded even further to build a large dual-blade version.								
+								</p>
+									
+									<h2>Key Features</h2>
+									<p>
+										Regarding the DC motors, we found an online datasheet with the motor's important characteristics such as current rating, 
+										maximum speed, and wiring detail. After extensive research, we decided to use a Sabertooth motor controller to drive the motors. <br />
+										The Sabertooth board that we used, was a two-channel motor controller capable of delivering 32A to each motor. 
+										This board had a USB port that could connect to a computer for configuration and tuning purposes. 
+										The Sabertooth controller is quite an intelligent board with several protection features such as overtemperature, 
+										short circuit and over-current shutdown. <br />
+										Using DIP switches the working principle of the motors could be defined to change between normal and tank-style mixing modes.
+										The tank-style mode allows the lawn mower to do a 360-degree turn. Other than that, the receiver signals could be directly fed 
+										into the board and processed by the motor driver.<br />
+										<h3>The First Version</h3>
+										The mainframe of the first version was salvaged from an old electric wheelchair. I attached the main cutter blade to an old car 
+										battery (which was accessible to us) through a high-power switch to be able to 
+										turn the blade on and off manually. The second lead acid battery was used to deliver power to the motor controller and DC motors.<br />
+										The radio transmitter has several different configurations such as channel mixing options and trigger setups. For instance, 
+										I configured the transmitter to switch between low-speed and high-speed modes by toggling one of the switches on the transmitter. 
+										This feature maps the signal values into different scales so the output signal would be tuned based on these settings.<br />
+										Below is a short video of the first version of the RC lawn mower cutting the grass.
+										</p>
+										<!--	
+										<div style="text-align: center;">
+											<video style="box-shadow: 0px 0px 10px rgba(7, 7, 7, 0.3); " width="800" height="450"  controls poster="/images/Lawn Mower/bg.jpg" >
+												<source src="/images/Lawn Mower/Single Blade LM.MP4" type="video/mp4">
+												Your browser does not support the video tag.
+											  </video>
+										</div>-->
+										<div class="container">
+											<video class="AfiVidSize" style="box-shadow: 0px 0px 10px rgba(7, 7, 7, 0.3); " height="auto"  controls poster="/images/Lawn Mower/bg.jpg" >
+												<source src="/images/Lawn Mower/Single Blade LM.MP4" type="video/mp4">
+												<style>
+													.AfiVidSize {
+														/*width: var(--image-size, 40%);  Default width from HTML */
+														width:70%;
+														
+													}
+												
+													@media screen and (max-width: 768px) {
+														.AfiVidSize {
+															/*width: calc(var(--img-size, 40%) * 2);  Double the width for mobile */
+														width:90%;
+														}
+													}
+												</style>
+												Your browser does not support the video tag.
+											  </video>
+											</div>
+											<br />
+
+										<p>
+										Below is an image of the first version of the RC lawn mower.
+
+										</p>	
+										<!--<div class="row gtr-50 gtr-50">
+											<div class="col-10"><span class="image fit" style="padding-inline-start: 200px;"><img src="/images/Lawn Mower/TheFirstVersion.jpg" alt="" /></span></div>
+										</div>-->
+
+										<div class="container">
+											<img id="toggleImage" src="/images/Lawn Mower/TheFirstVersion.jpg" alt="My Project Image" class="image1" width="80%" height="auto">
+											<br />
+										</div>
+
+										<p>
+											
+										<h3>The Second Version</h3>
+										The second version of the lawn mower was much more powerful than the first one. The mainframe was salvaged from a 
+										ride-on-mower with two cutting blades and a petrol engine. The front wheels come with a DC motor attached to them and it was easier 
+										for us to attach them to the main frame with the motors attached to the wheels (the front motors are not used).<br /> 
+										This system had a couple of considerable advantages over the previous version with a battery-powered blade. 
+										For instance, the petrol engine can deliver more power to the blades and the electrical part of the lawn mower is isolated 
+										from the blade driving system. <br />
+										The rear wheels are on the same axis (shaft) and are driven by a large DC motor and another motor with a gearbox is used for steering. 
+										The both motors are attached to the Sabertooth motor driver.<br />
+										Finally, we added a linear actuator to the blade platform to be able to adjust the vertical distance of the blades from the grass. 
+										This feature allowed us to set the height of the grass to cut depending on the land.<br /> 
+										Below is a short video of the second version of the lawn mower and how it is developed and tested.
+										</p>
+
+										<!--
+										<div style="text-align: center;">
+											<video style="box-shadow: 0px 0px 10px rgba(7, 7, 7, 0.3); " width="800" height="450"  controls poster="/images/Lawn Mower/4Wheel Lawn Mower1.jpeg" >
+												<source src="/images/Lawn Mower/LawnMower - Made with Clipchamp.mp4" type="video/mp4">
+												Your browser does not support the video tag.
+											  </video>
+										</div>
+											-->
+										<div class="container">
+											<video class="AfiVidSize" style="box-shadow: 0px 0px 10px rgba(7, 7, 7, 0.3); " width="70%" height="auto"  controls poster="/images/Lawn Mower/4Wheel Lawn Mower1.jpeg" >
+												<source src="/images/Lawn Mower/LawnMower - Made with Clipchamp.mp4" type="video/mp4">
+												Your browser does not support the video tag.
+											  </video>
+											</div>
+											<br /> 
+										<!--	
+										<p>
+											The following image shows the rear view of the model. 
+											  <div class="image main"><img src="/images/Sudoku/box arrays.jpg" alt="" /></div>
+											 
+											<a href="/images/Cybertruck/CT3.PNG" class="image main" style="box-shadow: 0px 0px 10px rgba(7, 7, 7, 0.3);" target="_self">
+											<img src="/images/Cybertruck/CT3.PNG" alt="My Project Image"></a>
+											
+										</p>-->
+									 <h2>Challenges and Solutions</h2>
+									<p>
+										The engine would need to start with a switch attached to a solenoid. To be able to remotely start the engine, 
+										I attempted to use one of the signals from the radio receiver for this purpose however I needed to convert the PWM signal 
+										to a logic level and enable or disable the solenoid through an electromechanical relay.<br />
+										Besides engine control, I needed to measure the battery voltage to detect the low battery and stop the system to prevent 
+										any undesired behaviour. <br />
+										Eventually, I built a circuit board using an Arduino and relay to start the engine along with battery measurement and 
+										low-battery indicator features.<br />
+										Below is the circuit that I designed for this purpose. 
+									</p>
+
+									<div class="container">
+										<img id="toggleImage" src="/images/Lawn Mower/engine control schematic.jpg" alt="My Project Image" class="image1" width="80%" height="auto">
+										<br />
+									</div>
+
+									<p>
+										Initially, I attempted to build the PCB at home due to time constraints however, the outcome was not quite satisfying 
+										so I ordered PCBs to JLCPCB and assembled the board and tested it in my lab. 
+										Below is a short video of all the PCB building stages and testing procedures.<br />
+										Apologies in advance for my messy desk:)
+									</p>
+									<!--
+									<div style="text-align: center;">
+										<video style="box-shadow: 0px 0px 10px rgba(7, 7, 7, 0.3); " width="800" height="450"  controls poster="/images/Lawn Mower/3D_PCB.jpg" >
+											<source src="/images/Lawn Mower/Batt_ind_PCB.mp4" type="video/mp4">
+											Your browser does not support the video tag.
+										  </video>
+									</div>
+									-->
+									<div class="container">
+										<video class="AfiVidSize" style="box-shadow: 0px 0px 10px rgba(7, 7, 7, 0.3); " width="70%" height="auto"  controls poster="/images/Lawn Mower/3D_PCB.jpg" >
+											<source src="/images/Lawn Mower/Batt_ind_PCB.mp4" type="video/mp4">
+											Your browser does not support the video tag.
+										  </video>
+									</div>
+									<br />
+									<p>
+										One of the interesting parts of the project was designing the height adjustment actuator. This feature would allow 
+										the user to remotely adjust the grass height by moving the blade platform up and down. 
+										I used the linear actuator salvaged from the electric bed to implement this feature. 
+										The linear motor had some sort of internal stopper to stop the actuator at the end of the stroke. 
+										I only needed to configure one of the channels of the receiver to enable and disable a relay to deliver power to the actuator. <br />
+										Lastly, the PWM signals needed to be calibrated for the main motor and the steering motor. The Sabertooth motor driver has a 
+										micro USB port to facilitate the programming and calibration process using the Sabertooth user interface which is called "DEScribe".<br />  
+										Below is a screenshot of the application that simplifies the PWM signal settings and mid-point of the signal.
+									</p>
+
+
+									<div class="container">
+										<img id="toggleImage" src="/images/Lawn Mower/DEScribe.jpg" alt="My Project Image" class="image1" width="80%" height="auto">
+										<br />
+									</div>
+									Other than all the electrical and mechanical challenges, I designed a holder to mount all the high-power Anderson connectors 
+									to the lawn mower chassis and protect them against any damage and short circuits.<br /> 
+									The below image shows the 3D-printed part using my Ender3 printer in my lab.
+
+									<div class="container">
+										<img id="toggleImage" src="/images/Lawn Mower/Anderson Holder.JPG" alt="My Project Image" class="image1" width="80%" height="auto">
+										<br />
+									</div>
+										<!--
+									<div style="text-align: center;">
+										<video style="box-shadow: 0px 0px 10px rgba(7, 7, 7, 0.3); height: 525px; width: 300px;" controls poster="/images/Payload/poster1.jpg">
+											<source src="/images/Payload/Payload Test-music.mp4" type="video/mp4">
+											Your browser does not support the video tag.
+										</video>
+									</div>
+									
+									<br />
+									<div style="text-align: center;">
+										<video style="box-shadow: 0px 0px 10px rgba(7, 7, 7, 0.3); " width="700" height="400"  controls poster="/images/Payload/poster2.jpg" >
+											<source src="/images/Payload/Payload Test-music 2.mp4" type="video/mp4">
+											Your browser does not support the video tag.
+										</video>
+									</div>
+									<br />
+									-->
+									<h2>Final Words</h2>
+									<p>
+										This project was the most challenging in terms of mechanical and electrical complexities. The majority of mechanical parts 
+										were done by my friend and all the electrical/electronic section of the project was done by me such as attaching all the 
+										motors and actuators along with their control circuits. <br />
+										This project probably took around 3 months to finish and I planned to add many more features to make this machine safer and more reliable. 
+										For instance, a sensor that could detect any dangerous slopes that could potentially flip the lawn mower. 
+										This could be extremely dangerous because once the lawn mower is flipped upside down, the blades would still be rotating at 
+										the maximum speed. This feature could detect this condition and disable the blade by shutting down the engine.<br />
+										Overall, this was a successful project with a deliverable outcome. I enjoyed working on this machine and trying to add new 
+										features with the salvaged parts from old and broken electrical equipment.
+									</p>
+									
+									
+									<hr />
+									
+									<h3>Interesting Project? Let's talk about it :)</h3>
+								
+									
+							<form method="post" action="https://formspree.io/f/xvggqqky">
+								<input type="hidden" name="Subject" id="Subject" value="RC Lawn Mower"  />
+								<div class="row gtr-uniform">
+									<div class="col-4 col-12-xsmall">
+										<label class="fs-label" for="Name">Name (*)</label>
+										<input type="text" name="Name" id="Name" value="" style="height: 40px;" required />
+									</div>
+									
+									<div class="col-4 col-12-xsmall">
+										<label class="fs-label" for="Email">Email (*)</label>
+										<input type="text" name="Email" id="Email" value="" style="height: 40px;" required />
+									</div>
+									<div class="col-4 col-12-xsmall">
+										<label  class="fs-label" for="Company">Company</label>
+										<input type="text" name="Company" id="Company" value="" style="height: 40px;" />
+									</div>
+									
+									<div class="col-12 col-12-xsmall">
+										<!-- style="padding: 10px;" class="fs-textarea" class="fs-label" <label class="fs-label" for="message">Message (*)</label> -->
+										<textarea
+										  style="padding: 10px;"
+										  id="Message"
+										  name="Message"
+										  placeholder="Share your thoughts and suggestions here."
+										  rows="3"
+										  required
+										></textarea>
+									</div>
+									<br />
+
+								  <div class="actions">
+									<input class="button primary" type="submit" value="Submit"  />
+								  </div>
+
+								</div>
+							</form>
+						</section>
+
+				</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<!--<section>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="3"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+						</section>
+						<section class="split contact">
+							<section class="alt">
+								<h3>Address</h3>
+								<p>1234 Somewhere Road #87257<br />
+								Nashville, TN 00000-0000</p>
+							</section>
+							<section>
+								<h3>Phone</h3>
+								<p><a href="#">(000) 000-0000</a></p>
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">info@untitled.tld</a></p>
+							</section>-->
+							<section>
+								<h3>Let's socialize</h3>
+								<ul class="icons">
+									<li><a href="https://linkedin.com/in/abolfazl-abbasi-b60850a2" class="fa-brands fa-linkedin fa-lg"></span></a></li>
+									<li><a href="mailto:abbasi.a92@gmail.com" class="fa-solid fa-envelope fa-lg"></span></a></li>
+									<li><a href="https://github.com/AfiMakesThings" class="fa-brands fa-github fa-lg"></span></a></li>
+								</ul>
+								<!--<ul class="icons alt">
+									<li><a href="https://linkedin.com/in/abolfazl-abbasi-b60850a2" class="fa-brands fa-linkedin" style="font-size: 2em;"></a></li>
+									<li><a href="mailto:abbasi.a92@gmail.com" class="fa-solid fa-envelope fa-lg" style="margin-left: 20px;"></a></li>
+									<li><a href="https://github.com/AfiMakesThings" class="fa-brands fa-github" style="font-size: 2em;"></a></li>
+								</ul>-->
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; AfiMakesThings!</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="/assets/js/popup.js"></script>
+			<script src="/assets/js/jquery.min.js"></script>
+			<script src="/assets/js/jquery.scrollex.min.js"></script>
+			<script src="/assets/js/jquery.scrolly.min.js"></script>
+			<script src="/assets/js/browser.min.js"></script>
+			<script src="/assets/js/breakpoints.min.js"></script>
+			<script src="/assets/js/util.js"></script>
+			<script src="/assets/js/main.js"></script>
+
+	</body>
+</html>

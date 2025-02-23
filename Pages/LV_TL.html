@@ -1,0 +1,299 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Afi Makes Things! - LabVIEW Traffic Light</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+		integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header1 id="header">
+						<!--<a href="index.html" class="logo">Afi Makes Things!</a>-->
+					</header1>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="/index.html">home</a></li>
+							<li><a href="/indexp2.html">back</a></li>
+							<li class="active"><a href="LV_TL.html">LabVIEW Traffic Light</a></li>
+							<!-- <li><a href="elements.html">Elements Reference</a></li> -->
+							<li><a class="mobile-only" href="Pages/WhoAmI.html">About Me</a></li>
+						</ul>
+						<style>
+							/* By default, both classes are visible */
+							@media (min-width: 769px) {
+								.desktop-only {
+									display: block !important;
+								}
+								.mobile-only {
+									display: none !important;
+								}
+							}
+							/* When screen size is 768px or smaller (mobile), switch the visibility */
+							@media (max-width: 768px) {
+								.desktop-only {
+									display: none !important; /* Hide desktop tabs */
+								}
+								.mobile-only {
+									display: block !important; /* Show mobile-only tabs */
+								}
+							}
+						</style>
+						<ul class="icons">
+							<li><a href="https://linkedin.com/in/abolfazl-abbasi-b60850a2" class="fa-brands fa-linkedin fa-lg"></span></a></li>
+							<li><a href="mailto:abbasi.a92@gmail.com" class="fa-solid fa-envelope fa-lg"></span></a></li>
+							<li><a href="https://github.com/AfiMakesThings" class="fa-brands fa-github fa-lg"></span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+
+									<h1>LabVIEW Traffic Light</h1>
+									<p>
+										Smart traffic lights controlled <br />
+										via Bluetooth and LabVIEW</p>
+								</header>
+
+								<div class="container">
+									<img id="toggleImage" src="/images/LV Traffic Light with BT/traffic light.jpg" alt="My Project Image" class="image1NoBorder" width="80%" height="auto">
+								</div>
+								<br /> 
+								
+								<h2>Background Story</h2>
+								<p>I used to work as a testing and automation engineer and maintain test systems running with LabVIEW applications. 
+									This is the first LabVIEW application that I developed to learn LabVIEW programming. <br />
+									I was interested in learning about LabVIEW at work and used it to assist my senior engineer in troubleshooting test jigs. 
+									He was the designer of all the test jigs and I tried to learn and understand LabVIEW codes with his help. 
+									I decided to learn LabVIEW programming so I asked for an extra week of holiday over the Christmas and New Year break.
+									I also borrowed a DAQ (Data Acquisition) device from work to create my testing hardware at home.<br /> 
+									I believe that learning through projects is far deeper than just trying to understand codes and scripts so I defined a simple project of Bluetooth-controlled traffic light. 
+									I worked full-time for a week on this project and then part-time during work days. Eventually, I managed to finish this project in a month.
+								</p>
+									
+									<h2>Key Features</h2>
+									<p>
+										I am interested in Arduino and believe it is quite handy to quickly create a project so I tried to combine Arduino and LabVIEW in my project. 
+										This traffic light can be configured using a smartphone and Bluetooth connection. <br /> 
+										HC05 is the Bluetooth module I used in my project. My Android phone could connect to HC05 then using the BT Terminal app on my phone
+										I managed to send and receive texts/commands.<br /> 
+										All the settings are received by the serial communication of the Arduino that is wired up to the HC05 module and my computer 
+										running the LabVIEW application reads these settings and executes on a DAQ (USB-6501). <br /> 
+										I designed a simple circuit on a breadboard using some transistors and LEDs to be able to simulate the traffic light in practice. 
+										The DAQ drives all the LEDs according to the received settings.<br /> 
+
+										Below is a simple diagram that shows how all the components are wired up.
+										</p>
+
+										<div class="container">
+											<img id="toggleImage" src="/images/LV Traffic Light with BT/diagram.jpg" alt="My Project Image" class="image1" width="100%" height="auto">
+										</div>
+										<br />
+										<!--	
+										
+
+										<p>
+											The following image shows the rear view of the model. 
+											  <div class="image main"><img src="/images/Sudoku/box arrays.jpg" alt="" /></div>
+											 
+											<a href="/images/Cybertruck/CT3.PNG" class="image main" style="box-shadow: 0px 0px 10px rgba(7, 7, 7, 0.3);" target="_self">
+											<img src="/images/Cybertruck/CT3.PNG" alt="My Project Image"></a>
+											
+										</p>-->
+									 <h2>Challenges and Solutions</h2>
+									<p>
+
+										In the context of hardware design, the DAQ could output a maximum of 15mA and this could be an issue because 
+										my LED circuit could draw more current than 15mA (A red LED is rated for 20mA). To address this concern, 
+										I implemented a simple BJT switching circuit to prevent any damage to the DAQ's GPIOs. <br />
+										The Arduino connects to the PC using a USB cable and using the in-built serial terminal of the Arduino IDE I 
+										could send and receive messages. Besides the serial communication between Arduino and PC, I needed to create 
+										another serial connection between Arduino and the HC05 module.<br />
+										I used the SoftwareSerial library from the Arduino website to be able to define two pins of the Arduino nano 
+										as UART pins (TX and RX). These pins are used to communicate all the messages to/from the HC05 module.<br />
+										Lastly, the HC05 module is developed based on an old Bluetooth version (Ver2.0) and I struggled to connect to 
+										the module using my iPhone but luckily I had an old Samsung phone that I could use for this purpose.<br />
+										In terms of the LabVIEW code, It was a bit challenging to choose a buffer size and timeout delay that could 
+										capture all the bytes on the serial port. Other than that, I needed to capture the messages and split and search 
+										for specific pieces of information that are required to configure the traffic lights.<br />
+										Below is a snapshot of the front panel of the LabVIEW application that works in parallel with the circuit on the breadboard. 
+									</p>
+
+
+									<div class="container">
+										<img id="toggleImage" src="/images/LV Traffic Light with BT/BT Traffic Light.jpg" alt="My Project Image" class="image1" width="65%" height="auto">
+									</div>
+									<br />
+									<p>
+										The below image shows the LabVIEW code in the idle state of the traffic light that waits to receive bytes 
+										at the serial port and analyzes them.
+									</p>
+
+									<div class="container">
+										<img id="toggleImage" src="/images/LV Traffic Light with BT/BT Traffic Block Diagram.jpg" alt="My Project Image" class="image1" width="100%" height="auto">
+									</div>
+									<br />
+										<!--
+									<div style="text-align: center;">
+										<video style="box-shadow: 0px 0px 10px rgba(7, 7, 7, 0.3); height: 525px; width: 300px;" controls poster="/images/Payload/poster1.jpg">
+											<source src="/images/Payload/Payload Test-music.mp4" type="video/mp4">
+											Your browser does not support the video tag.
+										</video>
+									</div>
+									
+									<br />
+									<div style="text-align: center;">
+										<video style="box-shadow: 0px 0px 10px rgba(7, 7, 7, 0.3); " width="700" height="400"  controls poster="/images/Payload/poster2.jpg" >
+											<source src="/images/Payload/Payload Test-music 2.mp4" type="video/mp4">
+											Your browser does not support the video tag.
+										</video>
+									</div>
+									<br />
+									-->
+									<h2>Final Words</h2>
+									<p>
+										This was my first LabVIEW project, it took quite some time to finish it. Adding an Arduino and Bluetooth communication
+										to the project, added more complexity to the hardware and software aspects of the project.<br />
+										I learned about initializing and using a DAQ in my projects, working with serial ports and detecting messages. 
+										Other than that, developing state machines in LabVIEW is quite effective in separating parts of the code that 
+										could simplify the troubleshooting process. <br />
+										Moreover, I worked with Bluetooth module and Arduino and managed to send and receive messages. I can potentially use this module for other projects that require some sort of wireless communication.
+										</p>
+									
+									
+									<hr />
+									
+									<h3>Interesting Project? Let's talk about it :)</h3>
+								
+									
+							<form method="post" action="https://formspree.io/f/xvggqqky">
+								<input type="hidden" name="Subject" id="Subject" value="LabVIEW Traffic Lights"  />
+								<div class="row gtr-uniform">
+									<div class="col-4 col-12-xsmall">
+										<label class="fs-label" for="Name">Name (*)</label>
+										<input type="text" name="Name" id="Name" value="" style="height: 40px;" required />
+									</div>
+									
+									<div class="col-4 col-12-xsmall">
+										<label class="fs-label" for="Email">Email (*)</label>
+										<input type="text" name="Email" id="Email" value="" style="height: 40px;" required />
+									</div>
+									<div class="col-4 col-12-xsmall">
+										<label  class="fs-label" for="Company">Company</label>
+										<input type="text" name="Company" id="Company" value="" style="height: 40px;" />
+									</div>
+									
+									<div class="col-12 col-12-xsmall">
+										<!-- style="padding: 10px;" class="fs-textarea" class="fs-label" <label class="fs-label" for="message">Message (*)</label> -->
+										<textarea
+										  style="padding: 10px;"
+										  id="Message"
+										  name="Message"
+										  placeholder="Share your thoughts and suggestions here."
+										  rows="3"
+										  required
+										></textarea>
+									</div>
+									<br />
+
+								  <div class="actions">
+									<input class="button primary" type="submit" value="Submit"  />
+								  </div>
+
+								</div>
+							</form>
+						</section>
+
+				</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<!--<section>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="3"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+						</section>
+						<section class="split contact">
+							<section class="alt">
+								<h3>Address</h3>
+								<p>1234 Somewhere Road #87257<br />
+								Nashville, TN 00000-0000</p>
+							</section>
+							<section>
+								<h3>Phone</h3>
+								<p><a href="#">(000) 000-0000</a></p>
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">info@untitled.tld</a></p>
+							</section>-->
+							<section>
+								<h3>Let's socialize</h3>
+								<ul class="icons">
+									<li><a href="https://linkedin.com/in/abolfazl-abbasi-b60850a2" class="fa-brands fa-linkedin fa-lg"></span></a></li>
+									<li><a href="mailto:abbasi.a92@gmail.com" class="fa-solid fa-envelope fa-lg"></span></a></li>
+									<li><a href="https://github.com/AfiMakesThings" class="fa-brands fa-github fa-lg"></span></a></li>
+								</ul>
+								<!--<ul class="icons alt">
+									<li><a href="https://linkedin.com/in/abolfazl-abbasi-b60850a2" class="fa-brands fa-linkedin" style="font-size: 2em;"></a></li>
+									<li><a href="mailto:abbasi.a92@gmail.com" class="fa-solid fa-envelope fa-lg" style="margin-left: 20px;"></a></li>
+									<li><a href="https://github.com/AfiMakesThings" class="fa-brands fa-github" style="font-size: 2em;"></a></li>
+								</ul>-->
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; AfiMakesThings!</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="/assets/js/popup.js"></script>
+			<script src="/assets/js/jquery.min.js"></script>
+			<script src="/assets/js/jquery.scrollex.min.js"></script>
+			<script src="/assets/js/jquery.scrolly.min.js"></script>
+			<script src="/assets/js/browser.min.js"></script>
+			<script src="/assets/js/breakpoints.min.js"></script>
+			<script src="/assets/js/util.js"></script>
+			<script src="/assets/js/main.js"></script>
+
+	</body>
+</html>

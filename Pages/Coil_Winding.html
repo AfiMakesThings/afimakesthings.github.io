@@ -1,0 +1,250 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Afi Makes Things! - Coil Winding Machine</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header1 id="header">
+
+					</header1>
+					<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+					integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+					crossorigin="anonymous" referrerpolicy="no-referrer" />
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="/index.html">back</a></li>
+							<li class="active"><a href="Coil_Winding.html">Coil Winding Machine</a></li>
+							<li><a class="mobile-only" href="Pages/WhoAmI.html">About Me</a></li>
+							<!-- <li><a href="elements.html">Elements Reference</a></li> -->
+						</ul>
+						<style>
+							/* By default, both classes are visible */
+							@media (min-width: 769px) {
+								.desktop-only {
+									display: block !important;
+								}
+								.mobile-only {
+									display: none !important;
+								}
+							}
+							/* When screen size is 768px or smaller (mobile), switch the visibility */
+							@media (max-width: 768px) {
+								.desktop-only {
+									display: none !important; /* Hide desktop tabs */
+								}
+								.mobile-only {
+									display: block !important; /* Show mobile-only tabs */
+								}
+							}
+						</style>
+						<ul class="icons">
+							<li><a href="https://linkedin.com/in/abolfazl-abbasi-b60850a2" class="fa-brands fa-linkedin fa-lg"></span></a></li>
+							<li><a href="mailto:abbasi.a92@gmail.com" class="fa-solid fa-envelope fa-lg"></span></a></li>
+							<li><a href="https://github.com/AfiMakesThings" class="fa-brands fa-github fa-lg"></span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+
+									<h1>Coil Winding Machine</h1>
+									<p>This is a quick and simple machine to wind a coil.<br />
+									I made this machine with available parts in my lab.</p>
+								</header>
+								<!--
+								<div class="image main"><img src="/images/Coil_Winding/Coil winding.jpg" alt="" class="afi-image"/>
+									<br /><br />
+		
+									<style>
+
+										
+										  /* Styles for screens smaller than 768px (e.g., most smartphones) */
+										  .afi-image {
+											max-width: 100%; /* Adjust width as needed */
+											height: auto; /* Maintain aspect ratio */
+										  }
+										  @media (max-width: 768px) {
+										  /* Styles for screens smaller than 768px (e.g., most smartphones) */
+										  .afi-image {
+											max-width: 70%; /* Adjust width as needed */
+											height: auto; /* Maintain aspect ratio */
+										  }										
+										}
+									  
+									  </style>
+								</div>
+							-->
+								<div class="container">
+									<img id="toggleImage" src="/images/Coil_Winding/Coil winding.jpg" alt="My Project Image" class="image1NoBorder" width="70%" height="auto">
+									<br />
+								</div> 
+								<h2>Background Story</h2>
+								<p>When I was studying for my bachelor's degree, I got interested in making a taser gun for fun. 
+									I watched so many YouTube videos to get some ideas and make one. 
+									The majority of the videos that I watched, used off-the-shelf high-voltage transformers to generate voltages above 100kV. 
+									These transformers are quite cheap and accessible through eBay and Amazon however, 
+									due to sanctions against the country, banking, and shipping restrictions, I decided to make a transformer in my lab.<br />
+									I found some transformers with ferrite cores in my lab and removed all the existing windings. 
+									I calculated the primary and secondary voltage ratio of the transformer and using some online tools, 
+									found a suitable wire for this purpose. Because the wire was so thin (probably around 0.2mm), 
+									the winding process was so difficult. <br />
+									To generate 50 to 100kV in the secondary of the transformer, I needed to wind the coil for a couple of thousand turns. 
+									As I remember, I did the winding manually almost 20 times but failed to finish it because of difficulty in counting turns and breaking the wire accidentally. 
+									Eventually, I decided to make the coil winding machine for this purpose.</p>
+									<h2>Key Features</h2>
+									<p>
+										This machine has a 12v DC motor with a simple PWM speed controller. 
+										Using a NE555 timer I managed to make a PWM signal and adjust the speed of the motor using a potentiometer (volume). 
+										To count the turns, I used a hall sensor and a magnet attached to the coil holder shaft so 
+										I could get a signal in every revolution then fed these signals to an Arduino to increment a counter. 
+										The Arduino converts these values to arrays that could drive a 3-digit seven-segment and show the turns accurately. 	
+										</p>
+									<h2>Challenges and Solutions</h2>
+									<p>
+										The high speed of the DC motor was one of my concerns in this project but 
+										I had a motor with a gearbox attached to it to reduce the speed and enhance the torque. 
+										Other than that, I used my benchtop power supply to power up all the control circuits as well as 
+										the DC motor.<br />
+										Because I needed to wind the coil roughly between 1000 and 2000 turns, 
+										I used the decimal point to indicate that the number was over 1000.<br /> 
+										The major challenge was making the mechanical fixture and assemble all together. 
+										I didn't have a 3D printer and I had to make something from scratch to hold everything together. 
+										I used a whiteboard marker as a shaft to hold the core of the coil and glued the magnet to it. 
+										I also glued the shaft of the motor to the marker because didn't have a shaft coupling.
+									</p>
+									<p>
+										The following image shows the main components of this project. <br />
+										<!--  <div class="image main"><img src="/images/Sudoku/box arrays.jpg" alt="" /></div>-->
+
+										<div class="container">
+											<img id="toggleImage" src="/images/Coil_Winding/Coil winding detail.jpg" alt="My Project Image" class="image1">
+											<br />
+										</div>
+										The following image is a short video of the Arduino counter on a breadboard, I just used a 2-digit 7-segment to get the counter working.
+										<!--<div class="row gtr-50 gtr-uniform">
+										<div class="col-8"><span class="image fit"><img src="/images/Sudoku/Single prob.jpg" alt="" /></span></div>
+										</div>
+										<a href="images/Coil_Winding/Arduino Counter.jpg" class="image main" style="box-shadow: 0px 0px 10px rgba(7, 7, 7, 0.3);" target="_self">
+										<img src="/images/Coil_Winding/Arduino Counter.jpg"   alt="My Project Image"></a>-->
+									</p>
+									<!--
+									<div style="text-align: center;">
+									<video width="320" height="480" controls poster="images/Coil_Winding/Arduino Counter.jpg" >
+										<source src="/images/Coil_Winding/Counter Short.mp4" type="video/mp4">
+										Your browser does not support the video tag.
+									  </video>
+									</div>
+									-->	
+									<div class="container">
+										<video style="box-shadow: 0px 0px 10px rgba(7, 7, 7, 0.3); " width="320px" height="480px"  controls poster="/images/Coil_Winding/Arduino Counter.jpg" >
+											<source src="/images/Coil_Winding/Counter Short.mp4" type="video/mp4" >
+											Your browser does not support the video tag.
+										  </video>
+										</div>
+										<br />
+									<h2>Final Words</h2>
+									<p>
+									I tried to make this machine as quick as possible so I could get back to making a DIY taser. 
+									Finally, I managed to wind a coil for my project however, I couldn't make a reliable taser and had some component failures. 
+									I learned a lot about driving 7-segments, Arduino counter, hall sensor, DC motor, and NE555 motor driver. 
+									This project could be further developed with the possibility of 3D-printing the mechanical parts. 
+									Other than that, a wire traveller could also make this machine fully autonomous. 
+									</p>
+									
+									
+									<hr />
+									<h3>Interesting Project? Let's talk about it :)</h3>
+									
+									<form method="post" action="https://formspree.io/f/xvggqqky">
+										<input type="hidden" name="Subject" id="Subject" value="Coil_Winding"  />
+										<div class="row gtr-uniform">
+											<div class="col-4 col-12-xsmall">
+												<label class="fs-label" for="Name">Name (*)</label>
+												<input type="text" name="Name" id="Name" value="" style="height: 40px;" required />
+											</div>
+											
+											<div class="col-4 col-12-xsmall">
+												<label class="fs-label" for="Email">Email (*)</label>
+												<input type="text" name="Email" id="Email" value="" style="height: 40px;" required />
+											</div>
+											<div class="col-4 col-12-xsmall">
+												<label  class="fs-label" for="Company">Company</label>
+												<input type="text" name="Company" id="Company" value="" style="height: 40px;" />
+											</div>
+											
+											<div class="col-12 col-12-xsmall">
+												<!-- style="padding: 10px;" class="fs-textarea" class="fs-label" <label class="fs-label" for="message">Message (*)</label> -->
+												<textarea
+												  style="padding: 10px;"
+												  id="Message"
+												  name="Message"
+												  placeholder="Share your thoughts and suggestions here."
+												  rows="3"
+												  required
+												></textarea>
+											</div>
+											<br />
+											
+										  <div class="actions">
+											<input class="button primary" type="submit" value="Submit"  />
+										  </div>
+
+										</div>
+									</form>
+								
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						
+							<section>
+								<h3>Let's socialize</h3>
+								<ul class="icons">
+									<li><a href="https://linkedin.com/in/abolfazl-abbasi-b60850a2" class="fa-brands fa-linkedin fa-lg"></span></a></li>
+									<li><a href="mailto:abbasi.a92@gmail.com" class="fa-solid fa-envelope fa-lg"></span></a></li>
+									<li><a href="https://github.com/AfiMakesThings" class="fa-brands fa-github fa-lg"></span></a></li>
+								</ul>
+							</section>
+
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; AfiMakesThings!</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="/assets/js/popup.js"></script>
+			<script src="/assets/js/jquery.min.js"></script>
+			<script src="/assets/js/jquery.scrollex.min.js"></script>
+			<script src="/assets/js/jquery.scrolly.min.js"></script>
+			<script src="/assets/js/browser.min.js"></script>
+			<script src="/assets/js/breakpoints.min.js"></script>
+			<script src="/assets/js/util.js"></script>
+			<script src="/assets/js/main.js"></script>
+
+	</body>
+</html>

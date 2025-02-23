@@ -1,0 +1,318 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Afi Makes Things! -NRF24L01 Remote Controller</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+		integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header1 id="header">
+						<!--<a href="index.html" class="logo">Afi Makes Things!</a>-->
+					</header1>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="/index.html">home</a></li>
+							<li><a href="/indexp2.html">back</a></li>
+							<li class="active"><a href="RC.html">NRF24L01 Remote Controller</a></li>
+							<li><a class="mobile-only" href="Pages/WhoAmI.html">About Me</a></li>
+							<!-- <li><a href="elements.html">Elements Reference</a></li> -->
+						</ul>
+						<!-- Add this style block INSIDE HTML -->
+						<style>
+							/* By default, both classes are visible */
+							@media (min-width: 769px) {
+								.desktop-only {
+									display: block !important;
+								}
+								.mobile-only {
+									display: none !important;
+								}
+							}
+							/* When screen size is 768px or smaller (mobile), switch the visibility */
+							@media (max-width: 768px) {
+								.desktop-only {
+									display: none !important; /* Hide desktop tabs */
+								}
+								.mobile-only {
+									display: block !important; /* Show mobile-only tabs */
+								}
+							}
+						</style>
+						<ul class="icons">
+							<li><a href="https://linkedin.com/in/abolfazl-abbasi-b60850a2" class="fa-brands fa-linkedin fa-lg"></span></a></li>
+							<li><a href="mailto:abbasi.a92@gmail.com" class="fa-solid fa-envelope fa-lg"></span></a></li>
+							<li><a href="https://github.com/AfiMakesThings" class="fa-brands fa-github fa-lg"></span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+
+									<h1>NRF24L01 <br />Remote Controller</h1>
+									<p>A handy circuit to deploy wireless communication in any project.</p>
+								</header>
+
+								<div class="container">
+									<img id="toggleImage" src="/images/Remote Contoller with Joystick/3D pcb.jpg" alt="My Project Image" class="image1NoBorder" width="80%" height="auto">
+								</div>
+								<br /> 
+								
+								<h2>Background Story</h2>
+								<p>This is remote control circuitry that could elevate any project by adding a wireless communication feature.
+									I made this a couple of years ago to hopefully use in some other projects such as UAV or lawn mower machines.  <br />
+									I was inspired by a YouTube video to create this project however I added extra features to it along the way. 
+									The initial objective of this project was to learn how to design a PCB and possibly fabricate the PCB if needed. 
+								</p>
+									
+									<h2>Key Features</h2>
+									<p>
+										The transmitter is designed to work with two 18650 LiPo batteries. These batteries are placed in a battery holder
+										and they could power up the board using a two-pin connector and a slide switch. Once the power is inserted 
+										through the switch, an LED will turn on to show the presence of power in the circuit.<br /> 
+										A 3.3V voltage regulator provides power to the NRF module. The regulator is used to manage the current bursts of 
+										the NRF module during send and receive. The other parts of the circuit get power from the batteries directly. 
+										The Arduino Nano is located in the middle of the board and controls the behaviour of the circuit. 
+										I have used an off-the-shelf Arduino Nano to be able to simply replace or remove it from the pin header if required.<br />
+										The MPU6050  gyroscope/accelerometer module adds an extra feature to this board to allow the user to control any 
+										moving device by tilting the board rather than using the joysticks. The communication protocol of this module is I2C other than that,
+										the NRF module talks to the Arduino via SPI. <br />
+										Moreover, I added a dedicated circuit on the board that could detect the low voltage state of the batteries
+										and inform the user through a flashing LED. The minimum threshold was adjustable using a trim pot.<br />
+									
+										
+										</p>
+										<!--	
+										
+
+										<p>
+											The following image shows the rear view of the model. 
+											  <div class="image main"><img src="/images/Sudoku/box arrays.jpg" alt="" /></div>
+											 
+											<a href="images/Cybertruck/CT3.PNG" class="image main" style="box-shadow: 0px 0px 10px rgba(7, 7, 7, 0.3);" target="_self">
+											<img src="/images/Cybertruck/CT3.PNG" alt="My Project Image"></a>
+											
+										</p>-->
+									 <h2>Challenges and Solutions</h2>
+									<p>
+
+										This project was one of my first PCB designs using EasyEDA and I managed to proceed and fabricate the PCB. 
+										Below is the image of the PCB that I received from JLCPCB.<br />
+										
+
+										<div class="container">
+											<img id="toggleImage" src="/images/Remote Contoller with Joystick/PCB.JPG" alt="My Project Image" class="image1" width="80%" height="auto">
+										</div>
+										<br />
+										This design could get more complex by designing and implementing the Arduino board on my PCB. 
+										The modular design of the PCB allows me to create a reliable circuit in a short amount of time rather than involving 
+										in the complex design of every module on the board.<br />
+										To simplify the design and minimise the complexity, I usually create the schematics in blocks so I can separate each 
+										section of the design. This strategy also helps me to troubleshoot and understand the circuit quickly. I am also 
+										interested in using labels in schematics rather than crossing tracks and wires all around the board which makes it more 
+										difficult to analyse the design. <br />
+										The below image shows the schematic for this PCB.
+									</p>
+
+
+									<div class="container">
+										<img id="toggleImage" src="/images/Remote Contoller with Joystick/Schematic.png" alt="My Project Image" class="image1" width="100%" height="auto">
+									</div>
+									<br />
+
+										<!--<div style=" text-align: center; padding-left: 80px; padding-right: 80px;" >
+											
+											<a href="images/CNC/wiring.jpg" class="image fit" style="box-shadow: 0px 0px 10px rgba(7, 7, 7, 0.3); width: 750px; ">  <img src="/images/CNC/wiring.jpg" alt="" /> </a>
+									   
+										</div>	
+
+										The following videos show how the suspension mechanism works. The stability of the cylinder was further improved when loaded.
+
+										<div style=" margin: 20px 300px; " >
+											
+											 <a href="images/CNC/X and Z Axis.jpg" class="image fit" style="box-shadow: 0px 0px 10px rgba(7, 7, 7, 0.3); width: 300px; ">  <img src="/images/CNC/X and Z Axis.jpg" alt="" /> </a>
+											
+										</div>-->
+										<p>
+											I found out that the naming format was different compared to the product type so I needed to add more features
+											 in my application to detect them.<br />
+											As mentioned before, the user could generate a list of serial numbers and their test results in batches. 
+											The application was meant to store all the information on the SQL database however having multiple lists 
+											(generated in batches) would create duplicate numbers in the database. I created a new feature to look up the serial number 
+											in the SQL database before adding it to the table. The application would simply ignore the duplicated serial numbers 
+											and notify the user. The below screenshot shows the duplicate finder stage of the application before uploading the 
+											results to the database.<br />
+											In the context of PCB layout, I had some trouble laying out the board with the large potentiometers but I was able 
+											to move the components around and create some space for them. 
+											Finally, the below image shows the different parts of the parts as well as the layout of the main modules and switches.
+										</p>
+
+										<div class="container">
+											<img id="toggleImage" src="/images/Remote Contoller with Joystick/3D pcb labeled.jpg" alt="My Project Image" class="image1" width="100%" height="auto">
+										</div>
+										<br />
+										<!--
+									<div style="text-align: center;">
+										<video style="box-shadow: 0px 0px 10px rgba(7, 7, 7, 0.3); height: 525px; width: 300px;" controls poster="images/Payload/poster1.jpg">
+											<source src="/images/Payload/Payload Test-music.mp4" type="video/mp4">
+											Your browser does not support the video tag.
+										</video>
+									</div>
+									
+									<br />
+									<div style="text-align: center;">
+										<video style="box-shadow: 0px 0px 10px rgba(7, 7, 7, 0.3); " width="700" height="400"  controls poster="images/Payload/poster2.jpg" >
+											<source src="/images/Payload/Payload Test-music 2.mp4" type="video/mp4">
+											Your browser does not support the video tag.
+										</video>
+									</div>
+									<br />
+									-->
+									<h2>Final Words</h2>
+									<p>
+										This project was initiated from a need to have a remote control and add wireless features to my projects. 
+										I designed this PCB and was able to get some basic features to work. I developed a simple code in Arduino IDE 
+										and test in my lab with a simple receiver circuit on a breadboard however couldn't proceed further due to university constraints at the time.<br />
+										I didn't have a chance to properly design the receiver PCB but I assume that is quite dependent on the properties and features 
+										of the device/machine that needs to be controlled remotely. I hope I will find some time to finish the receiver and test 
+										and verify the transmitter and receiver properly.
+										</p>
+									
+									
+									<hr />
+									
+									<h3>Interesting Project? Let's talk about it :)</h3>
+								
+									
+							<form method="post" action="https://formspree.io/f/xvggqqky">
+								<input type="hidden" name="Subject" id="Subject" value="NRF Remote Controller"  />
+								<div class="row gtr-uniform">
+									<div class="col-4 col-12-xsmall">
+										<label class="fs-label" for="Name">Name (*)</label>
+										<input type="text" name="Name" id="Name" value="" style="height: 40px;" required />
+									</div>
+									
+									<div class="col-4 col-12-xsmall">
+										<label class="fs-label" for="Email">Email (*)</label>
+										<input type="text" name="Email" id="Email" value="" style="height: 40px;" required />
+									</div>
+									<div class="col-4 col-12-xsmall">
+										<label  class="fs-label" for="Company">Company</label>
+										<input type="text" name="Company" id="Company" value="" style="height: 40px;" />
+									</div>
+									
+									<div class="col-12 col-12-xsmall">
+										<!-- style="padding: 10px;" class="fs-textarea" class="fs-label" <label class="fs-label" for="message">Message (*)</label> -->
+										<textarea
+										  style="padding: 10px;"
+										  id="Message"
+										  name="Message"
+										  placeholder="Share your thoughts and suggestions here."
+										  rows="3"
+										  required
+										></textarea>
+									</div>
+									<br />
+
+								  <div class="actions">
+									<input class="button primary" type="submit" value="Submit"  />
+								  </div>
+
+								</div>
+							</form>
+						</section>
+
+				</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<!--<section>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="3"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+						</section>
+						<section class="split contact">
+							<section class="alt">
+								<h3>Address</h3>
+								<p>1234 Somewhere Road #87257<br />
+								Nashville, TN 00000-0000</p>
+							</section>
+							<section>
+								<h3>Phone</h3>
+								<p><a href="#">(000) 000-0000</a></p>
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">info@untitled.tld</a></p>
+							</section>-->
+							<section>
+								<h3>Let's socialize</h3>
+								<ul class="icons">
+									<li><a href="https://linkedin.com/in/abolfazl-abbasi-b60850a2" class="fa-brands fa-linkedin fa-lg"></span></a></li>
+									<li><a href="mailto:abbasi.a92@gmail.com" class="fa-solid fa-envelope fa-lg"></span></a></li>
+									<li><a href="https://github.com/AfiMakesThings" class="fa-brands fa-github fa-lg"></span></a></li>
+								</ul>
+								<!--<ul class="icons alt">
+									<li><a href="https://linkedin.com/in/abolfazl-abbasi-b60850a2" class="fa-brands fa-linkedin" style="font-size: 2em;"></a></li>
+									<li><a href="mailto:abbasi.a92@gmail.com" class="fa-solid fa-envelope fa-lg" style="margin-left: 20px;"></a></li>
+									<li><a href="https://github.com/AfiMakesThings" class="fa-brands fa-github" style="font-size: 2em;"></a></li>
+								</ul>-->
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; AfiMakesThings!</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="/assets/js/popup.js"></script>
+			<script src="/assets/js/jquery.min.js"></script>
+			<script src="/assets/js/jquery.scrollex.min.js"></script>
+			<script src="/assets/js/jquery.scrolly.min.js"></script>
+			<script src="/assets/js/browser.min.js"></script>
+			<script src="/assets/js/breakpoints.min.js"></script>
+			<script src="/assets/js/util.js"></script>
+			<script src="/assets/js/main.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full-Screen Image Popup</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin: 20px; }
+        img { width: 200px; cursor: pointer; border-radius: 10px; margin: 20px; }
+
+        /* Full-screen popup */
+        .popup { 
+            display: none; 
+            position: fixed; 
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            background: rgba(0, 0, 0, 0.9); 
+            justify-content: center; 
+            align-items: center; 
+        }
+
+        /* Full-screen image */
+        .popup img { 
+            width: 100vw; 
+            height: 100vh; 
+            object-fit: contain; 
+            cursor: pointer; 
+        }
+
+        /* Close button */
+        .popup span { 
+            position: absolute; 
+            top: 20px; 
+            right: 30px; 
+            color: white; 
+            font-size: 30px; 
+            font-weight: bold;
+            cursor: pointer; 
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Click the image to view it full screen</h2>
+
+    <div id="error-message" style="color: red; font-weight: bold;"></div>
+
+    <!-- Small preview image -->
+    <img id="mainImage" src="images/Cybertruck/CT2.jpg" alt="Cybertruck"
+         onclick="openPopup(this.src)" 
+         onerror="handleImageError()">
+
+    <!-- Full-screen popup -->
+    <div class="popup" id="popup" onclick="closePopup()">
+        <span onclick="closePopup()">&times;</span>
+        <img id="popupImg" onclick="closePopup()">
+    </div>
+
+
+<script src="assets/js/popup.js"></script>
+</body>
+</html>
