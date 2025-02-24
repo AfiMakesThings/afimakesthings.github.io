@@ -129,15 +129,17 @@
 										<style>
 											/* Default styling for the image */
 											#img1 {
-												width: 100%;     /* Make it full width by default */
-												height: auto;    /* Maintain the aspect ratio */
+												width: 100%;       /* Make it full width */
+												height: auto;      /* Maintain aspect ratio */
 											}
-									
+										
 											/* For desktop view (width 768px and above) */
 											@media screen and (min-width: 768px) {
 												#img1 {
-													height: 335px; /* Change the height on desktop */
-													width: 100%;   /* Let the width adjust automatically */
+													width: 100%;           /* Adjust width for desktop */
+													height: auto;         /* Maintain aspect ratio */
+													aspect-ratio: 1200/650;   /* Adjust this based on your image */
+													object-fit: cover;    /* Ensure no distortion */
 												}
 											}
 										</style>
@@ -154,8 +156,25 @@
 								<article>
 									<header>
 										<h2><a href="Pages/Mini_CNC.html">Mini CNC Plotter</a></h2>
+										<style>
+											/* Default styling for the image */
+											#img2 {
+												width: 100%;       /* Make it full width */
+												height: auto;      /* Maintain aspect ratio */
+											}
+										
+											/* For desktop view (width 768px and above) */
+											@media screen and (min-width: 768px) {
+												#img2 {
+													width: 100%;           /* Adjust width for desktop */
+													height: auto;         /* Maintain aspect ratio */
+													aspect-ratio: 1200/650;   /* Adjust this based on your image */
+													object-fit: cover;    /* Ensure no distortion */
+												}
+											}
+										</style>
 									</header>
-									<a href="Pages/Mini_CNC.html" class="image fit"><img src="images/CNC/miniCnC.jpg" alt="" /></a>
+									<a href="Pages/Mini_CNC.html" class="image fit"><img id="img2" src="images/CNC/miniCnC.jpg" alt="" /></a>
 									<p><b>Pushing the boundaries of crafting!</b> <br />
 										This mini CNC plotter is the best gateway to the world of computer-controlled drawing. Build it yourself (thanks to a YouTube video!), and transform your digital art into physical masterpieces.</p>
 									<ul class="actions special">

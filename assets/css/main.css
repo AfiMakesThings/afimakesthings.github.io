@@ -165,7 +165,7 @@ input, select, textarea {
 		-webkit-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 		-ms-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 		transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-		border-bottom: dotted 1px;
+		/*border-bottom: dotted 1px;*/
 		text-decoration: none;
 	}
 
@@ -3040,10 +3040,12 @@ fieldset {
 				
 			}
 			.image1NoBorder {
-				display: block;
+				display: flex;
 				/*width: 20%;  /* Default width for small images */
 				/*height: auto;*/
 				max-width: 100%;
+				justify-content: center; /* Center the image */
+				align-items: center;
 				cursor: pointer;
 				transition: transform 0.3s ease; /* Smooth transition */
 				/*box-shadow: 0px 0px 10px rgba(7, 7, 7, 0.3);*/
